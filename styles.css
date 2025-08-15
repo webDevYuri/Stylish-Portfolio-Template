@@ -8,7 +8,7 @@
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-size: 14px;
 }
 
@@ -177,7 +177,6 @@ p {
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
   color: #ff6b35;
-  transform: translateX(10px);
 }
 
 .scroll-indicator {
