@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Creative Developer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'dark': '#0a0a0a',
+                        'dark-light': '#1a1a1a',
+                        'accent': '#ff6b35',
+                        'accent-light': '#ff8c69',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans overflow-x-hidden">
+    <header class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <div class="md:w-40 flex-shrink-0 flex justify-center" data-aos="fade-right">
+                    <div class="w-10 h-10 bg-white flex items-center justify-center">
+                        <div class="w-6 h-6 bg-dark transform rotate-45"></div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-12 flex-1 justify-center" data-aos="fade-down" data-aos-delay="200">
+                    <a href="#home" class="nav-link text-white hover:text-accent transition-colors relative">HOME</a>
+                    <a href="#about" class="nav-link text-gray-400 hover:text-accent transition-colors relative">ABOUT</a>
+                    <a href="#services" class="nav-link text-gray-400 hover:text-accent transition-colors relative">SERVICES</a>
+                    <a href="#portfolio" class="nav-link text-gray-400 hover:text-accent transition-colors relative">WORK</a>
+                    <a href="#testimonials" class="nav-link text-gray-400 hover:text-accent transition-colors relative">TESTIMONIALS</a>
+                    <a href="#contact" class="nav-link text-gray-400 hover:text-accent transition-colors relative">CONTACT</a>
+                </div>
+                <div class="w-40 flex-shrink-0 flex justify-center hidden lg:block" data-aos="fade-left" data-aos-delay="400">
+                    <a href="#contact" class="bg-white text-dark px-6 py-3 font-medium hover:bg-gray-100 transition-colors">
+                        CONTACT
+                    </a>
+                </div>
+
+                <button class="lg:hidden text-white" id="mobile-menu-btn">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+            
+            <div class="lg:hidden mobile-menu" id="mobile-menu">
+                <button class="mobile-close-btn" id="mobile-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="mobile-menu-content">
+                    <a href="#home" class="mobile-nav-link">HOME</a>
+                    <a href="#about" class="mobile-nav-link">ABOUT</a>
+                    <a href="#services" class="mobile-nav-link">SERVICES</a>
+                    <a href="#portfolio" class="mobile-nav-link">WORK</a>
+                    <a href="#testimonials" class="mobile-nav-link">TESTIMONIALS</a>
+                    <a href="#contact" class="mobile-nav-link">CONTACT</a>
+                    <div class="mt-8">
+                        <a href="#contact" class="bg-accent text-white px-8 py-4 font-medium inline-block">
+                            GET IN TOUCH
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden md:px-5">
+        <div class="absolute top-20 right-20 w-64 h-64 border border-gray-800 opacity-20" data-aos="zoom-in" data-aos-delay="1000"></div>
+        <div class="absolute bottom-20 left-20 w-32 h-32 bg-accent opacity-10 blur-xl" data-aos="fade-up" data-aos-delay="1200"></div>
+        
+        <div class="absolute top-1/4 right-10 experience-badge z-20" data-aos="fade-left" data-aos-delay="800">
+            <div class="relative">
+                <div class="w-32 h-32 border-2 border-gray-700 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold">15+</div>
+                        <div class="text-xs text-gray-400">YEARS OF<br>EXPERIENCE</div>
+                    </div>
+                </div>
+                <div class="absolute -top-4 -right-4 w-8 h-8 bg-accent"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="max-w-4xl">
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="text-7xl md:text-9xl font-serif font-bold leading-none mb-8">
+                            JOHN<br>
+                            <span class="text-outline">DOE</span>
+                        </h1>
+                    </div>
+                    
+                    <div class="flex items-center mb-12" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-16 h-px bg-accent mr-6"></div>
+                        <p class="text-gray-400 text-lg">OVER 15 YEARS OF EXPERIENCE<br>CREATIVE DEVELOPER BASED IN MELBOURNE</p>
+                    </div>
+                    
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <a href="#portfolio" class="inline-flex items-center bg-accent text-white px-8 py-4 font-medium hover:bg-accent-light transition-colors group">
+                            VIEW MY WORK
+                            <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative hidden md:block" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&w=1470&auto=format&fit=crop" 
+                             alt="Creative Developer Workspace" class="w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-accent opacity-20 blur-2xl"></div>
+                        <div class="absolute -top-6 -left-6 w-16 h-16 border-2 border-gray-700"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2" data-aos="fade-up" data-aos-delay="1000">
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="py-32 relative md:px-5">
+        <div class="sunlight-effect"></div>
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <div class="mb-8">
+                        <span class="text-accent text-sm font-medium tracking-wider" data-aos="fade-up" data-aos-delay="100">ABOUT ME</span>
+                        <h2 class="text-5xl font-serif font-bold mt-4 mb-8" data-aos="fade-up" data-aos-delay="200">
+                            CREATIVE DEVELOPER<br>
+                            <span class="text-gray-400">BASED IN MELBOURNE</span>
+                        </h2>
+                    </div>
+                    
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8" data-aos="fade-up" data-aos-delay="300">
+                        I am dedicated to developing innovative solutions and impactful experiences that 
+                        meet user needs and exceed expectations. With over 15 years in the industry, 
+                        I've helped brands create memorable digital experiences that drive real results.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 mb-8" data-aos="fade-up" data-aos-delay="400">
+                        <div>
+                            <div class="text-3xl font-bold text-accent mb-2">150+</div>
+                            <div class="text-gray-400">Projects Completed</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-accent mb-2">50+</div>
+                            <div class="text-gray-400">Happy Clients</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center text-accent font-medium hover:text-accent-light transition-colors group" data-aos="fade-up" data-aos-delay="500">
+                        READ MORE
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <div class="relative" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1541421607508-421cd40e195d?q=80&w=687&auto=format&fit=crop" 
+                             alt="John Doe Profile" class="w-full max-w-md mx-auto grayscale">
+                        <div class="absolute -bottom-8 -left-8 w-32 h-32 border-2 border-accent opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="py-32 relative md:px-5">
+        <div class="sunlight-effect"></div>
+        <div class="container mx-auto px-6 mb-20">
+            <div class="flex items-center justify-between">
+                <div data-aos="fade-right">
+                    <span class="text-accent text-sm font-medium tracking-wider">SERVICES</span>
+                    <h2 class="text-5xl font-serif font-bold mt-4">
+                        WHAT I DO
+                    </h2>
+                </div>
+                <div class="hidden lg:block" data-aos="fade-left">
+                    <div class="w-16 h-16 border border-gray-700 flex items-center justify-center">
+                        <i class="fas fa-arrow-right text-accent"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white text-dark p-8" data-aos="flip-left" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-accent flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">DIGITAL<br>STRATEGY</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Comprehensive digital strategies that align with your business goals and drive measurable results.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#" class="text-accent font-medium text-sm hover:text-accent-light transition-colors">
+                            LEARN MORE →
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card-dark bg-dark-light border border-gray-800 p-8" data-aos="flip-left" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-accent flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">WEB<br>DEVELOPMENT</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Custom websites and applications built with modern technologies and best practices.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#" class="text-accent font-medium text-sm hover:text-accent-light transition-colors">
+                            LEARN MORE →
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card-dark bg-dark-light border border-gray-800 p-8" data-aos="flip-left" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-accent flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">MOBILE<br>APPS</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Native and cross-platform mobile applications that deliver exceptional user experiences.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#" class="text-accent font-medium text-sm hover:text-accent-light transition-colors">
+                            LEARN MORE →
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white text-dark p-8" data-aos="flip-left" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-accent flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">BRAND<br>IDENTITY</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Complete brand identity solutions that make your business stand out from the competition.
+                    </p>
+                    <div class="mt-6">
+                        <a href="#" class="text-accent font-medium text-sm hover:text-accent-light transition-colors">
+                            LEARN MORE →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="py-32 relative md:px-5">
+        <div class="sunlight-effect"></div>
+        <div class="container mx-auto px-6 mb-20">
+            <div class="flex items-center justify-between">
+                <div data-aos="fade-right">
+                    <span class="text-accent text-sm font-medium tracking-wider">FEATURED WORK</span>
+                    <h2 class="text-5xl font-serif font-bold mt-4">PROJECTS</h2>
+                    <p class="text-gray-400 mt-4 max-w-md">
+                        PLEASE ENJOY SOME OF MY RECENT PROJECTS<br>
+                        THAT I'VE BEEN WORKING ON LATELY.
+                    </p>
+                </div>
+                <div class="hidden lg:block" data-aos="fade-left">
+                    <div class="project-counter">
+                        <div class="text-6xl font-bold text-gray-800">ALL</div>
+                        <div class="text-sm text-gray-400">PROJECTS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6">
+            <div class="space-y-8">
+                <div class="project-item border-b border-gray-800 pb-8 px-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-between group cursor-pointer">
+                        <div class="flex items-center">
+                            <div class="text-3xl md:text-4xl font-bold text-gray-700">01</div>
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-serif font-bold group-hover:text-accent transition-colors">E-COMMERCE PLATFORM</h3>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-gray-400 text-sm md:text-base">React / Node.js / MongoDB</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item border-b border-gray-800 pb-8 px-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-between group cursor-pointer">
+                        <div class="flex items-center">
+                            <div class="text-3xl md:text-4xl font-bold text-gray-700">02</div>
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-serif font-bold group-hover:text-accent transition-colors">MOBILE BANKING APP</h3>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-gray-400 text-sm md:text-base">React Native / Firebase / API</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item border-b border-gray-800 pb-8 px-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center justify-between group cursor-pointer">
+                        <div class="flex items-center">
+                            <div class="text-3xl md:text-4xl font-bold text-gray-700">03</div>
+                            <div>
+                                <h3 class="text-2xl md:text-3xl font-serif font-bold group-hover:text-accent transition-colors">SAAS DASHBOARD</h3>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-gray-400 text-sm md:text-base">Angular / D3.js / MySQL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 mt-20">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1688561808434-886a6dd97b8c?q=80&w=1170&auto=format&fit=crop" 
+                                 alt="E-commerce Platform" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="p-6 h-full flex flex-col justify-center">
+                                <h3 class="text-xl font-bold mb-4 text-white">E-commerce Platform</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Modern e-commerce solution with advanced filtering, payment integration, and responsive design for optimal shopping experience.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">React</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Node.js</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://plus.unsplash.com/premium_photo-1661301075857-63868ae88c00?q=80&w=1170&auto=format&fit=crop" 
+                                 alt="Mobile Banking App" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="p-6 h-full flex flex-col justify-center">
+                                <h3 class="text-xl font-bold mb-4 text-white">Mobile Banking App</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Secure banking application with real-time transactions, biometric authentication, and comprehensive financial management tools.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">React Native</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Firebase</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1601972602288-3be527b4f18a?q=80&w=1170&auto=format&fit=crop" 
+                                 alt="Food Delivery App" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="p-6 h-full flex flex-col justify-center">
+                                <h3 class="text-xl font-bold mb-4 text-white">Food Delivery App</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Full-stack food delivery platform with real-time tracking, payment processing, and restaurant management system.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Vue.js</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Express</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                 alt="SaaS Dashboard" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="p-6 h-full flex flex-col justify-center">
+                                <h3 class="text-xl font-bold mb-4 text-white">SaaS Dashboard</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Analytics dashboard with advanced data visualization, user management, and comprehensive reporting features.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Angular</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">D3.js</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1074&auto=format&fit=crop" 
+                                 alt="Social Media Platform" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="p-6 h-full flex flex-col justify-center">
+                                <h3 class="text-xl font-bold mb-4 text-white">Social Media Platform</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Social networking platform with real-time messaging, content sharing, and advanced community features.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Next.js</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Socket.io</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Redis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1171&auto=format&fit=crop" 
+                                 alt="Learning Management System" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="p-6 h-full flex flex-col justify-center">
+                                <h3 class="text-xl font-bold mb-4 text-white">Learning Management System</h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Educational platform with course management, progress tracking, and interactive content delivery system.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Laravel</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">Vue.js</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-xs">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="py-32 relative md:px-5">
+        <div class="sunlight-effect"></div>
+        <div class="container mx-auto px-6 mb-20">
+            <div class="text-center" data-aos="fade-up">
+                <span class="text-accent text-sm font-medium tracking-wider">TESTIMONIALS</span>
+                <h2 class="text-5xl font-serif font-bold mt-4 mb-8">
+                    WHAT<br>
+                    <span class="text-gray-400">THEY SAY</span>
+                </h2>
+                <p class="text-gray-400 max-w-md mx-auto">
+                    DON'T TAKE MY WORD FOR IT. HERE'S WHAT<br>
+                    MY CLIENTS HAVE TO SAY ABOUT MY WORK.
+                </p>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white text-dark p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6">
+                        <div class="flex text-accent mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "John delivered an exceptional website that exceeded our expectations. 
+                            His attention to detail and creative vision are outstanding."
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://plus.unsplash.com/premium_photo-1726876905411-d6dd5842eb64?q=80&w=933&auto=format&fit=crop" 
+                             alt="Sarah Johnson" class="w-12 h-12 mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">CEO, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white text-dark p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6">
+                        <div class="flex text-accent mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "Working with John was a pleasure. He understood our vision perfectly 
+                            and created a digital experience that our users absolutely love."
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=880&auto=format&fit=crop" 
+                             alt="Michael Chen" class="w-12 h-12 mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">Founder, InnovateLab</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white text-dark p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6">
+                        <div class="flex text-accent mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "John's design skills are incredible. He transformed our brand 
+                            into a modern, conversion-focused platform that drives real results."
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                             alt="Emily Rodriguez" class="w-12 h-12 mr-4">
+                        <div>
+                            <h4 class="font-bold">Emily Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Marketing Director, GrowthCo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-32 relative md:px-5">
+        <div class="sunlight-effect"></div>
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div data-aos="fade-right" data-aos-duration="800">
+                    <span class="text-accent text-sm font-medium tracking-wider">GET IN TOUCH</span>
+                    <h2 class="text-5xl font-serif font-bold mt-4 mb-8">
+                        LET'S WORK<br>
+                        <span class="text-gray-400">TOGETHER</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-12">
+                        Ready to start your next project? Let's create something amazing together. 
+                        I'm always excited to work on new challenges and bring creative ideas to life.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-12 h-12 bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">EMAIL</p>
+                                <p class="text-white">john.doe@example.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-12 h-12 bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">PHONE</p>
+                                <p class="text-white">+61 (0) 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-12 h-12 bg-accent flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">LOCATION</p>
+                                <p class="text-white">Melbourne, Australia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-duration="800">
+                    <form class="space-y-6" id="contact-form">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required 
+                                       class="w-full px-6 py-4 bg-dark-light border border-gray-800 text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors">
+                            </div>
+                            <div data-aos="fade-up" data-aos-delay="200">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required 
+                                       class="w-full px-6 py-4 bg-dark-light border border-gray-800 text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors">
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required 
+                                   class="w-full px-6 py-4 bg-dark-light border border-gray-800 text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors">
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <textarea id="message" name="message" rows="6" placeholder="Your Message" required 
+                                      class="w-full px-6 py-4 bg-dark-light border border-gray-800 text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit" data-aos="fade-up" data-aos-delay="500"
+                                class="w-full bg-accent text-white py-4 px-8 font-medium hover:bg-accent-light transition-colors">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-dark-light border-t border-gray-800 py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-12 mb-12">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-white flex items-center justify-center mb-6">
+                        <div class="w-6 h-6 bg-dark transform rotate-45"></div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Creative developer and designer crafting beautiful digital experiences 
+                        that make a lasting impact on businesses and users worldwide.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fab fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fab fa-github text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fab fa-dribbble text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-white font-bold mb-6">SERVICES</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Mobile Apps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Brand Identity</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Digital Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-white font-bold mb-6">COMPANY</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-accent transition-colors">About</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-accent transition-colors">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-accent transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="text-white font-bold mb-6">NEWSLETTER</h4>
+                    <p class="text-gray-400 mb-6">
+                        Subscribe to get the latest updates and insights from my work and industry trends.
+                    </p>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Your email address" 
+                               class="w-full px-4 py-3 bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:border-accent focus:outline-none transition-colors">
+                        <button type="submit" 
+                                class="w-full bg-accent text-white py-3 px-6 font-medium hover:bg-accent-light transition-colors">
+                            SUBSCRIBE
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        © 2025 John Doe. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
